@@ -4,7 +4,7 @@
   "description": "Estudos com nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/models/*Tests.js",
+    "test": "mocha ./tests/models/*Tests.js ./tests/helpers/*Tests.js",
     "start": "nodemon server.js"
   },
   "author": "Marcus Rodrigues de Araujo",
