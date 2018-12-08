@@ -3,10 +3,6 @@ var assert = require("assert");
 var Usuario = require("../../api/models/UsuarioModel.js");
 var cpfValido = "81627934022";
 
-beforeEach("Setting up the userList", () => {
-    
-});
-
 describe("Para testar os acessos básicos ao objeto usuário", () => {
     var usuario;
 
