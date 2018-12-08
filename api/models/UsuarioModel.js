@@ -53,7 +53,7 @@ class UsuarioModel {
     }
 
     desativar() {
-        this.ativo = false;
+        this._ativo = false;
         // TODO: persistir no banco de dados
     }
 

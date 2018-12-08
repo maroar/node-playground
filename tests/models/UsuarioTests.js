@@ -91,9 +91,11 @@ describe("Para validar que os dados cadastrais dos usuários são obrigatórios"
 });
 
 describe("Quando um usuário for excluído", () => {
-    it("o sistema deve garantir que ele não está mais ativo após a exclusão", () => {
-
-        assert.equal(usuario._validaCPF(), "marcus");
+    it("o status de ativo dele deve ficar falso", () => {
+        usuario = new Usuario("marcus", "marcus@contagem.bh", "usuario", "senha", cpfValido, true, true);
+        assert.equal(usuario.ativo, true);
+        usuario.desativar();
+        assert.equal(usuario.ativo, false);
     });
 });
 
