@@ -1,5 +1,8 @@
 "use strict"
 
+var Datastore = require('nedb');  
+var db = new Datastore({ filename: 'Usuario.db', autoload: true });
+
 class UsuarioModel {
     constructor(nome, email, usuario, senha, cpf, isAdmin, ativo) {
         this._validaDadosDoUsuario(nome, email, usuario, senha, cpf)
@@ -55,6 +58,22 @@ class UsuarioModel {
     desativar() {
         this._ativo = false;
         // TODO: persistir no banco de dados
+    }
+
+    static all(callback) {
+        db.find({ }, function (err, docs) {
+            if (err)
+                console.log(err);
+            callback(err, docs);
+        });
+    }
+
+    static insere(doc, callback) {
+        db.insert(doc, function (err, newDoc) { 
+            if (err) 
+                console.log(err);
+            callback(err, newDoc);
+        });
     }
 
     get nome() {

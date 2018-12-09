@@ -32,19 +32,8 @@ describe("Para testar os atributos básicos do objeto Lance", () => {
         assert.equal(lance.valor, 1000);
     });
 });
-/*
-describe("Para garantir que os usuários cadastrados no sistema terão CPFs válidos", () => {
-    it("o sistema deve garantir que esse usuário pode ser criado porque seu CPF é válido", () => {
-        let usuario = new Usuario("marcus", "marcus@contagem.bh", "usuario", "senha", cpfValido, true, true);
-        assert.equal(usuario.cpf, cpfValido);
-    });
 
-    it("o sistema não deve deixar esse usuário ser criado porque o CPF dele não é válido", () => {
-        assert.throws(() => new Usuario("marcus", "marcus@contagem.bh", "usuario", "senha", "00000000000", true, true), Error);
-    });
-});
-
-describe("Para validar que os dados cadastrais dos usuários são obrigatórios", () => {
+describe("Assegurar que os dados cadastrais serão fornecidos", () => {
     it("deve garantir que um nome seja fornecido", () => {
         assert.throws(() => new Usuario("", "marcus@contagem.bh", "usuario", "senha", cpfValido, true, true), Error);
     });
@@ -65,16 +54,3 @@ describe("Para validar que os dados cadastrais dos usuários são obrigatórios"
         assert.throws(() => new Usuario("marcus", "marcus@contagem.bh", "usuario", "senha", null, true, true), Error);
     });
 });
-
-describe("Quando um usuário for excluído", () => {
-    it("o status de ativo dele deve ficar falso", () => {
-        usuario = new Usuario("marcus", "marcus@contagem.bh", "usuario", "senha", cpfValido, true, true);
-        assert.equal(usuario.ativo, true);
-        usuario.desativar();
-        assert.equal(usuario.ativo, false);
-    });
-});
-
-*/
-
-
