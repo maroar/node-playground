@@ -1,4 +1,5 @@
 var assert = require("assert");
+
 var Leilao = require("../../api/models/LeilaoModel.js");
 var Usuario = require("../../api/models/UsuarioModel.js");
 var DateHelper = require("../../api/helpers/DateHelper.js");
