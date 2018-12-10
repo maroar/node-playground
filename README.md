@@ -33,9 +33,9 @@ Este repositório tem por objetivo servir de estudo para o aprendizado da tecnol
 
 Para o desenvolvimento desta aplicação, o seguinte setup foi utilizado:
 
-os: Ubuntu 16.04 LTS
-node: v8.11.3
-npm: 6.4.1
+* os: Ubuntu 16.04 LTS
+* node: v8.11.3
+* npm: 6.4.1
 
 Até o momento, visualmente, só foi desenvolvido parte do CRUD dos usuários do sistema. Dessa forma, depois de iniciar a aplicação, só é possível acessar a seguinte página "http://localhost:3000/usuarios". Nessa página é possível cadastrar e visualizar usuários.
 
